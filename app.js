@@ -26,7 +26,7 @@ const reviewRoutes = require('./routes/reviews');
 
 const MongoStore = require('connect-mongo');
 
-//const dbUrl = process.env.DB_URL;                               // connects to atlas on mongodb cloud server
+//const dbUrl = process.env.DB_URL;                               // connects to Atlas on mongodb cloud server
 const dbUrl = process.env.DB_URL ||'mongodb://localhost:27017/yelp-camp'
 
 
