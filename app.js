@@ -11,18 +11,18 @@ const session = require('express-session');          //used so sessions can be u
 const flash = require('connect-flash')              // used so flash can be used in app
 const passport = require('passport');                 //for authentication of user
 const LocalStrategy = require('passport-local');    //for authentication of user
-const ExpressError = require('./utils/ExpressError');
+const ExpressError = require('./utils/ExpressError.js');
 const { campgroundSchema, reviewSchema } = require('./schemas.js');
-const Campground = require('./models/campground');   //connects to campground.js in model folder
-const Review = require('./models/review')
-const User = require('./models/user');
+const Campground = require('./models/campground.js');   //connects to campground.js in model folder
+const Review = require('./models/review.js')
+const User = require('./models/user.js');
 const helmet = require('helmet');
 
 const mongoSanitize = require('express-mongo-sanitize'); //used so when users write $ or . it is removed to stop them from hacking mongo and make commands.
 
-const userRoutes = require('./routes/users')
-const campgroundRoutes = require('./routes/campgrounds');        //connect to router
-const reviewRoutes = require('./routes/reviews');
+const userRoutes = require('./routes/users.js')
+const campgroundRoutes = require('./routes/campgrounds.js');        //connect to router
+const reviewRoutes = require('./routes/reviews.js');
 
 const MongoStore = require('connect-mongo');
 
