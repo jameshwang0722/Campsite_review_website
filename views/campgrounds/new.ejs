@@ -1,7 +1,7 @@
 <% layout('layouts/boilerplate')%>
     <div class="row">
         <h1 class="text-center"> New Campground</h1>
-        <div class="col--md-6 offset-md-3">
+        <div class="col-md-6 offset-md-3">
             <form action="/campgrounds" method="POST" novalidate class="validatedform" enctype="multipart/form-data">
                 <%# novalidate stops browser to validate the requirement%>
                     <div class="mb-3">
@@ -22,9 +22,9 @@
                         <div class="valid-feedback">Looks good!</div>
 
                     </div> -->
-                    <div class="mb-3">
+                    <div class="form-group ">
                         <label class="form-label" for="price">Campground Price:</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group">
                             <span class="input-group-text">$</span>
                             <input type="number" class="form-control" id="price" aria-label="price" placeholder="0"
                                 name="campground[price]" required>
@@ -33,7 +33,7 @@
 
                         </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="form-group mb-3">
                         <label class="form-label" for="description">Description:</label>
                         <textarea class="form-control" type="text" id="description" name="campground[description]"
                             required></textarea>
